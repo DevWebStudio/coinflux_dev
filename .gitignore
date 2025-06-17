@@ -1,0 +1,21 @@
+# Arbeitsumgebung
+.vscode/
+*.log
+
+# CSS Build-Ziele
+style/*.css
+style/*.css.map
+
+# SCSS-Cache (falls vorhanden)
+.sass-cache/
+
+# Node & Build-Ordner (wenn später relevant)
+node_modules/
+dist/
+
+# Temporäre Dateien
+*.bak
+*.tmp
+
+# Sonstiges
+.DS_Store
