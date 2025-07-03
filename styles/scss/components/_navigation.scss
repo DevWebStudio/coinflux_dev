@@ -1,0 +1,96 @@
+@use "sass:map";
+@use "../abstracts/breakpoints"as wbx_breakpoints;
+@use "../abstracts/colors"as colors;
+@use "../abstracts/typography"as typography;
+@use "../abstracts/animation"as animation;
+
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wbx-bg-dark {
+    background-color: colors.$nav-bg-dark-default;
+
+    @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "lg")) {
+        background-color: colors.$nav-bg-dark-lg;
+    }
+}
+
+.wbx-nav-login {
+    margin-left: 0;
+
+    @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "xxl")) {
+        margin-left: auto;
+    }
+}
+
+.wbx-nav-link-centered {
+    word-spacing: typography.$nav-link-wordspacing-default;
+    padding-left: typography.$nav-link-padding-left;
+
+
+    @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "sm")) {
+        .wbx-no-wrap {
+            white-space: nowrap;
+        }
+    }
+
+    @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "lg")) {
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        height: 100%; 
+
+        word-spacing: typography.$nav-link-wordspacing-lg;
+        ;
+        text-align: center;
+    }
+}
+
+.wbx-navbar-mobil {
+    opacity: 0;
+    transform: animation.$nav-transform-hidden;
+    transition: animation.$nav-transition-mobile;
+
+    /// Für ≥ lg übernimmt Bootstrap wieder das Standardverhalten
+    &.show {
+        opacity: 1;
+        transform: animation.$nav-transform-visible;
+
+        @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "sm")) {
+            /// optional: andere paddings, andere Farben etc.
+        }
+
+        @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "lg")) {
+            // Für große Bildschirme zurück auf Bootstrap-Standard
+        }
+    }
+
+    @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "lg")) {
+        /// Für > lg und aktiver oder inativer mobiler Navigation
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

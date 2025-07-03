@@ -1,0 +1,15 @@
+@use "sass:math";
+@use "sass:map";
+@use "../abstracts/breakpoints-24"as vars_grid;
+
+@each $breakpoint,
+$value in vars_grid.$wbx-breakpoints-24 {
+  @media (min-width: $value) {
+    @for $i from 1 through 24 {
+      .#{$breakpoint}#{$i} {
+        flex: 0 0 math.percentage(math.div($i, 24));
+        max-width: math.percentage(math.div($i, 24));
+      }
+    }
+  }
+}

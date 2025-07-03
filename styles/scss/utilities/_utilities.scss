@@ -1,0 +1,30 @@
+@use "../mixins/card-wrapper"as mixin;
+
+@include mixin.card-wrapper(xl, 8);
+@include mixin.card-wrapper(xl, 6);
+@include mixin.card-wrapper(lg, 8);
+@include mixin.card-wrapper(lg, 6);
+
+// .card-wrapper-xl-8 {
+//     @extend .col--24;
+//     @extend .col--md-12;
+//     @extend .col--xl-8;
+// }
+
+// .card-wrapper-xl-6 {
+//     @extend .col--24;
+//     @extend .col--md-12;
+//     @extend .col--xl-6;
+// }
+
+// .card-wrapper-lg-8 {
+//     @extend .col--24;
+//     @extend .col--md-12;
+//     @extend .col--lg-8;
+// }
+
+// .card-wrapper-lg-6 {
+//     @extend .col--24;
+//     @extend .col--md-12;
+//     @extend .col--lg-6;
+// }

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- weitere Angaben zur Laufzeit einbinden, description, keys, ... -->
+    <title>CoinFlux Dasboard</title>
+
+    <script>
+        (function () {
+            const simulateUnsupportedBrowser = false;
+            const userAgent = navigator.userAgent;
+            const isEdge14 = userAgent.includes('Edge/14');
+            if (simulateUnsupportedBrowser || isEdge14 || !window.fetch || !window.Promise || !window.addEventListener) {
+                window.location.href = '/browser-not-supported.html';
+            }
+        })();
+    </script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/grid-24.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <!-- Daten -->
+    <span id="dataset-parameters" data-parameter-seite='{
+        "id": "index"
+    }'></span>
+    <div class="background-image background-image-file-default"></div>
+
+    <div class="layout-default" id="layout">
+
+        <div class="layout-content" id="layout-content-slot">
+
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark wbx-bg-dark p-3 grid-nav">
+                <div class="container-fluid wbx-layout-container">
+                    <a class="navbar-brand" href="#">WBX Coin-Archiv</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#wbxNavbarPrimary" aria-controls="wbxNavbarPrimary" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse wbx-navbar-mobil" id="wbxNavbarPrimary">
+                        <ul id="navbarNavPrimar" class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active wbx-nav-link-centered " href="index.html"
+                                    data-page="index">Startseite</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link wbx-nav-link-centered" href="pages/frontend/coin-create.html"
+                                    data-page="coin-anlegen">Coins
+                                    anlegen</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active wbx-nav-link-centered" href="pages/frontend/coin-bearbeiten.html"
+                                    data-page="coin-bearbeiten">Coins bearbeiten</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link wbx-nav-link-centered" href="pages/frontend/coin-live.html"
+                                    data-page="coin-live">Live-Kurse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link wbx-nav-link-centered" href="pages/frontend/coin-graph.html"
+                                    data-page="coin-graph">Coin-Graph</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link wbx-nav-link-centered" href="pages/frontend/coin-historie.html"
+                                    data-page="coin-historie">Historische
+                                    Daten</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link wbx-nav-link-centered" href="pages/frontend/server-info.html"
+                                    data-page="php-info">PHP
+                                    Serverdaten</a>
+                            </li>
+                            <li class="nav-item obj-hide">
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="dummy">Dummy Parameter der
+                                    keine Funktion aber viel Text hat</a>
+                            </li>
+                        </ul>
+
+                        <ul id="navbarNavPrimarLogin" class="navbar-nav wbx-nav-login">
+                            <li class="nav-item">
+                                <a class="nav-link wbx-nav-link-centered" href="pages/frontend/coin-log.html"
+                                    data-page="coin-log">Logdaten
+                                    Server</a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link active wbx-nav-link-centered" data-page="login-user">
+                                    <span class="wbx-no-wrap wbx-mega-menu">Benutzerverwaltung</span>
+                                    <div class="wbx-megamenu obj-hide">
+                                        <ul class="wbx-navbar-mega">
+                                            <span class="obj-hide">Benutzeranmeldung</span>
+                                            <li class="wbx-nav-item">
+                                                <a class="nav-link wbx-nav-link-centered" href="login-info.html"
+                                                    data-page="login-info">Login Infos
+                                                </a>
+                                            </li>
+                                            <li class="wbx-nav-item">
+                                                <a class="nav-link wbx-nav-link-centered" href="user-login.html"
+                                                    data-page="user-login">Anmeldung
+                                                </a>
+                                            </li>
+                                            <li class="wbx-nav-item">
+                                                <a class="nav-link wbx-nav-link-centered" href="user-register.html"
+                                                    data-page="user-register">Registrieren
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="grid-main">
+                <div class="content-box content-box--main wbx-layout-container p-4">
+                    <div class="content-box-inner">
+                        <section>
+                            <h1 class="text-center">Willkommen bei WBX Coin-Flux</h1>
+                            <p class="text-center">Wähle eine Funktion aus dem Menü, um fortzufahren.</p>
+
+                            <h2>Willkommen</h2>
+                            <p>Wähle eine Funktion aus:</p>
+
+                            <div class="row justify-until--lg-center text-center mt-4 gy-4 row--gap-y-clean">
+                                
+                                <div class="card-wrapper-xl-8 mb-2 d-flex">
+                                    <div class="coin-card">
+                                        <img src="assets/images/content/cards/01.jpg" alt="Coins anlegen"
+                                            class="coin-card__image" />
+                                        <div class="coin-card__body">
+                                            <h3 class="coin-card__title">➕ Neue Coins anlegen</h3>
+                                            <p class="coin-card__text">
+                                                Neue Kryptowährungen können hier hinzugefügt und mit Basisinformationen
+                                                versehen werden.
+                                                Alle Einträge werden systematisch in der Datenbank gespeichert und
+                                                stehen sofort
+                                                für weitere Funktionen bereit.
+                                            </p>
+                                            <a href="pages/frontend/coin-create.html" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                                Mehr erfahren</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-wrapper-xl-8 mb-2 d-flex">
+                                    <div class="coin-card">
+                                        <img src="assets/images/content/cards/02.jpg"
+                                            alt="Coins bearbeiten oder löschen" class="coin-card__image" />
+                                        <div class="coin-card__body">
+                                            <h3 class="coin-card__title">🛠 Coins bearbeiten</h3>
+                                            <p class="coin-card__text">
+                                                Vorhandene Coin-Datensätze lassen sich hier aktualisieren oder löschen.
+                                                Änderungen wirken sich direkt auf die Datenbasis aus und stehen allen
+                                                Modulen zur Verfügung.
+                                            </p>
+                                            <a href="pages/frontend/coin-bearbeiten.html" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                                Anzeigen</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-wrapper-xl-8 mb-2 d-flex">
+                                    <div class="coin-card">
+                                        <img src="assets/images/content/cards/03.jpg" alt="Kursdaten anzeigen"
+                                            class="coin-card__image" />
+                                        <div class="coin-card__body">
+                                            <h3 class="coin-card__title">📈 Live-Kurse anzeigen</h3>
+                                            <p class="coin-card__text">
+                                                Zeigt aktuelle Kurse der wichtigsten Coins auf Basis externer APIs.
+                                                Die Daten werden beim Laden der Seite in Echtzeit abgerufen und visuell
+                                                dargestellt.
+                                            </p>
+                                            <a href="pages/frontend/coin-live.html" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                                Mehr erfahren
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-wrapper-xl-8 mb-2 d-flex">
+                                    <div class="coin-card">
+                                        <img src="assets/images/content/cards/04.jpg" alt="Historische Daten"
+                                            class="coin-card__image" />
+                                        <div class="coin-card__body">
+                                            <h3 class="coin-card__title">📊 Historische Daten</h3>
+                                            <p class="coin-card__text">
+                                                Hier können Kursdaten aus der Vergangenheit angezeigt werden. Die Darstellung erfolgt tabellarisch oder grafisch – je nach Auswahl – 
+                                                mit optionaler Filterung nach Zeitraum und Coin.
+                                                <br>
+                                                Hier können Kursdaten aus der Vergangenheit angezeigt werden. Die Darstellung erfolgt tabellarisch oder grafisch – je nach Auswahl – 
+                                                mit optionaler Filterung nach Zeitraum und Coin.
+                                            </p>
+                                            <a href="pages/frontend/coin-historie.html" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                                Mehr erfahren
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-wrapper-xl-8 mb-2 d-flex">
+                                    <div class="coin-card">
+                                        <img src="assets/images/content/cards/05.jpg" alt="Serverdaten"
+                                            class="coin-card__image" />
+                                        <div class="coin-card__body">
+                                            <h3 class="coin-card__title">📋 Serverdaten</h3>
+                                            <p class="coin-card__text">
+                                                Gibt interne Systemdaten aus, z. B. Datenbankverbindungen, Tabellenstatus oder technische Logs. 
+                                                Diese Seite dient primär der Überprüfung und Wartung.
+                                            </p>
+                                            <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                                Mehr erfahren
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-wrapper-xl-8 mb-2 d-flex">
+                                    <div class="coin-card">
+                                        <img src="assets/images/content/cards/06.jpg" alt="Logdaten tabelarisch anzeigen"
+                                            class="coin-card__image" />
+                                        <div class="coin-card__body">
+                                            <h3 class="coin-card__title">🔐 Logdaten tabelarisch anzeigen</h3>
+                                            <p class="coin-card__text">
+                                                Zeigt alle erfassten Log-Vorgänge inklusive Zeitstempel und IP-Adresse. 
+                                                Die Ausgabe dient zur Übersicht und Analyse von Benutzerzugriffen.
+                                            </p>
+                                            <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                                Mehr erfahren
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-wrapper-xl-8 mb-2 d-flex">
+                                    <div class="coin-card">
+                                        <img src="assets/images/content/cards/07.jpg" alt="Coin Graph erzeugen"
+                                            class="coin-card__image" />
+                                        <div class="coin-card__body">
+                                            <h3 class="coin-card__title">🧩 Coin Graph erzeugen</h3>
+                                            <p class="coin-card__text">
+                                                Erstellt grafische Visualisierungen von Coin-Daten. Es können unterschiedliche Diagrammtypen gewählt 
+                                                und nach Zeitraum oder Coin-ID gefiltert werden.
+                                            </p>
+                                            <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                                Mehr erfahren
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-wrapper-xl-8 mb-2 d-flex">
+                                    <div class="coin-card">
+                                        <img src="assets/images/content/cards/08.jpg" alt="Anmeldung"
+                                            class="coin-card__image" />
+                                        <div class="coin-card__body">
+                                            <h3 class="coin-card__title">🔑 Anmeldung</h3>
+                                            <p class="coin-card__text">
+                                                Ermöglicht die Anmeldung mit Benutzername und Passwort. Bei erfolgreichem Login stehen 
+                                                erweiterte Funktionen und geschützte Bereiche zur Verfügung.
+                                            </p>
+                                            <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                                Mehr erfahren
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="grid-footer">
+                <div class="content-box content-box--footer wbx-layout-container px-4">
+                    <section>
+                        <div class="row" style="margin-bottom: -20px;">
+
+                            <div class="col--24 col--md-8 col--xl-4 mb-2">
+                                <p class="p-4">
+                                    Links zu bestimmten wichtigen Seiten
+                                </p>
+                            </div>
+                            <div class="col--24 col--md-8 col--xl-4 mb-2">
+                                <p class="p-4">
+                                    Informationstext
+                                </p>
+                            </div>
+                            <div class="col--24 col--md-8 col--xl-4 mb-2">
+                                <p class="p-4">
+                                    weitere wichtige Links
+                                </p>
+                            </div>
+                            <div class="col--24 col--md-24 col--xl-12 mb-2">
+                                <div class="row" style="margin-bottom: -20px;">
+                                    <div class="col--8">
+                                        <p class="px-4">
+                                            Max Mostermann
+                                            Maxi Mostermann
+                                            Muster Straße 49
+                                            99999 Musterstadt
+                                        </p>
+                                    </div>
+                                    <div class="col--8">
+                                        <p class="px-4">
+                                            Schutzrechtsverletzung
+                                            Blindtextgenerator bemüht sich, etwaige Auseinandersetzungen im Konsens zu
+                                            lösen.
+                                            <!--Falls Sie also vermuten, dass von dieser Website aus eines Ihrer
+                                            Schutzrechte
+                                            verletzt wird, teilen Sie das bitte umgehend per elektronischer Post mit,
+                                            damit ...
+                                            zügig Abhilfe geschafft werden kann. Bitte nehmen Sie zur Kenntnis: Die
+                                            zeitaufwändigere Einschaltung eines Anwaltes zur für den Diensteanbieter
+                                            kostenpflichtigen Abmahnung entspricht nicht dessen wirklichen oder
+                                            mutmaßlichen
+                                            Willen. -->
+                                        </p>
+                                    </div>
+                                    <div class="col--8">
+                                        <p class="px-4">
+                                            Inhalt
+                                            Die Inhalte dieses Webprojektes wurden sorgfältig geprüft und nach bestem
+                                            Wissen
+                                            erstellt.
+                                            <!--Aber für die hier dargebotenen Informationen wird kein Anspruch
+                                            auf
+                                            Vollständigkeit, Aktualität, Qualität und Richtigkeit erhoben. Es kann keine
+                                            Verantwortung für Schäden übernommen werden, die durch das Vertrauen auf die
+                                            Inhalte-->
+                                            <!--dieser Website oder deren Gebrauch entstehen. -->
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <aside class="sidebar grid-aside-right is-absolute">
+        <div class="content-box content-box--sidebar-widget-right p-4">
+            <h2>Info</h2>
+            <p>Direktlinks zu den wichtigsten Menüpunkten</p>
+        </div>
+
+        <div class="content-box content-box--sidebar-widget-right p-4">
+            <h2>Alarmfunktion</h2>
+            <p>
+                Dieser Bereich ist für eine spätere Alarmfunktion vorgesehen.<br>
+                Geplant ist, Benachrichtigungen auszulösen, sobald ein Coin
+                einen definierten Zielwert erreicht oder sich prozentual gegenüber
+                dem letzten Abruf verändert.
+            </p>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="content-box content-box--footer-bar">
+            <div class="footer-bar__inner">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="ms-2 d-flex align-items-center text-small element-left">© 2025 WBX CoinFlux</span>
+                        <span class="me-2 d-flex align-items-center text-small element-left">Last Update:
+                            2025/06/25</span>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="me-2 d-flex align-items-center text-small element-right">Version: 2.0.1</span>
+                        <span class="me-2 d-flex align-items-center text-small element-right obj-hide-imp">[dd.mm.yyyy]
+                            - [hh:mm]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="scripts/vendor/bootstrap.bundle.js"></script>
+
+    <!-- Hauptmodul -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

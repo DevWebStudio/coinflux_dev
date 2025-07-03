@@ -1,0 +1,39 @@
+@use "../abstracts/colors"as colors;
+
+// =============================================
+// == Typografie Utilities =====================
+// =============================================
+
+// Allgemeine Textformate
+
+// Kleinere Meta-Textgröße, z. B. für Fußzeile, Infobalken etc.
+.text-small {
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  word-spacing: 0.15rem;
+  white-space: nowrap;
+}
+
+// =============================================
+// == Bootstrap-Erweiterungen: Navigation ======
+// =============================================
+
+.navbar-dark .navbar-nav .nav-link {
+    color: colors.$color-text-white-95;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: colors.$color-text-white-75;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.2rem;
+}
+
+.navbar-dark .nav-link.active {
+    color: colors.$color-turquoise;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.2rem;
+}

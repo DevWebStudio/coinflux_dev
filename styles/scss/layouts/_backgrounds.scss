@@ -1,0 +1,29 @@
+@use "../abstracts/images"as images;
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.background-image-file-default {
+  background-image: url(images.$background-default);
+}
+
+.background-image-file-variant-01 {
+  background-image: url(images.$background-variant-01);
+}
+
+.background-image-file-variant-02 {
+  background-image: url(images.$background-variant-02);
+}
+
+.background-image-file-variant-03 {
+  background-image: url(images.$background-variant-03);
+}

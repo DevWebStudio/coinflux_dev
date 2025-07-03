@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "../abstracts/breakpoints"as wbx_breakpoints;
+@use "../abstracts/layout-spacing"as layout;
+
+$sidebar-display-breakpoint: map.get(wbx_breakpoints.$wbx-breakpoints, "ultra-lg");
+$sidebar-top: layout.$layout-sidebar-top;
+
+$sidebar-width: 300px;
+$sidebar-spacing-gap-left: 30px;
+$sidebar-inner-gap: 2.8rem;
+
+///
+/// Formeln
+/// 
+$sidebar-right: calc((100% - (layout.$layout-container-max-width + 2 * $sidebar-width + $sidebar-spacing-gap-left)) / 2);

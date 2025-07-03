@@ -1,5 +1,6 @@
 # Arbeitsumgebung
 .vscode/
+.devtools/
 *.log
 
 # CSS Build-Ziele

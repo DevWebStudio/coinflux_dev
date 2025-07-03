@@ -1,0 +1,60 @@
+@use "../abstracts/layout-spacing"as spacings;
+
+.content-box {
+
+    background-color: rgba(255, 255, 255, 0.85); // später ggf. variable
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+
+    &--main {
+        height: 100%;
+        margin-top: spacings.$layout-main-top;
+        margin-bottom: spacings.$layout-main-bottom;
+
+        .content-box-inner {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    &--sidebar-widget-right {
+        padding: 1.25rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 0.5rem;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &--footer {
+        ///
+        /// 
+    }
+
+    &--footer-bar {
+        position: fixed;
+
+        .footer-bar__inner {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.4rem 1rem;
+            background-color: #ccc;
+            border-top: 1px solid #bbb;
+
+            .element-left,
+            .element-right {
+                border-right: 2px solid black;
+                padding-right: 5px;
+            }
+
+            .element-right {
+                border-left: 2px solid black;
+                padding-left: 5px;
+            }
+        }
+    }
+}

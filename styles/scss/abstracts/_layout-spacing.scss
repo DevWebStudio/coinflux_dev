@@ -1,0 +1,15 @@
+// =============================================
+// == Layout-Abstände (top, margins etc.) ======
+// =============================================
+// Zentrale Steuerung vertikaler Positionierung 
+// von Main, Sidebar u.a. layoutrelevanten Elementen
+
+// ==== Containergrößen ======================
+$layout-container-max-width: 1350px;
+
+// ==== Main-Bereich: vertikale Abstände =====
+$layout-main-top: 8rem;
+$layout-main-bottom: 3rem;
+
+// ==== Sidebar: vertikale Position ==========
+$layout-sidebar-top: 130px;

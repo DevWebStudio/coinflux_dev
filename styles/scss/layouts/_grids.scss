@@ -1,0 +1,30 @@
+@use "../abstracts/layout-structure"as layout;
+
+.layout-content {
+    display: grid;
+
+
+    grid-template-areas:
+        "navigation"
+        "main-area"
+        "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding-bottom: 1.5rem;
+}
+
+.grid-nav {
+    grid-area: navigation;
+}
+
+.grid-main {
+    grid-area: main-area;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-footer {
+    grid-area: footer;
+}

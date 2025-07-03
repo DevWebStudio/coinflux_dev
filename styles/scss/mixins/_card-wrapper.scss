@@ -1,0 +1,14 @@
+@use "../tools/grid-24" as *;
+
+/// Erstellt eine Utility-Klasse für Card-Wrapper
+/// @param {String} $breakpoint - z. B. lg, xl
+/// @param {Number} $cols - Spaltenanzahl (z. B. 6, 8)
+@mixin card-wrapper($breakpoint, $cols) {
+  .card-wrapper-#{$breakpoint}-#{$cols} {
+    @extend .col--24;
+    @extend .col--md-12;
+    @extend .col--#{$breakpoint}-#{$cols};
+    // @extend .mb-2;
+    // @extend .d-flex;
+  }
+}

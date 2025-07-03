@@ -1,0 +1,6 @@
+// Transition für mobile Nav
+$nav-transition-mobile: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+// Transform für mobile Navigation
+$nav-transform-hidden: translateY(-100%);
+$nav-transform-visible: translateY(0);

@@ -1,0 +1,14 @@
+@use "../../abstracts/layout-structure"as sidebars;
+
+.grid-aside-right {
+    display: none;
+
+    @media (min-width: sidebars.$sidebar-display-breakpoint) {
+        top: sidebars.$sidebar-top;
+        right: sidebars.$sidebar-right;
+        width: sidebars.$sidebar-width;
+        display: flex;
+        flex-direction: column;
+        gap: sidebars.$sidebar-inner-gap;
+    }
+}

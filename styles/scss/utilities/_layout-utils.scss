@@ -1,0 +1,10 @@
+@use "sass:map";
+@use "../abstracts/breakpoints"as wbx_breakpoints;
+
+.justify-until--lg-center {
+  justify-content: center;
+
+  @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "lg")) {
+    justify-content: flex-start;
+  }
+}

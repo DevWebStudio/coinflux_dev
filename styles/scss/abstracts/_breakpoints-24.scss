@@ -1,0 +1,20 @@
+/// Generiert die Zuordnung von Breakpoint-Keys zu Prefixen
+/// für das 24er-Grid-System (z. B. col--ultra-xl-)
+
+@use "sass:map";
+@use "./breakpoints"as vars;
+
+$wbx-breakpoints-24: ("col--": 0px, // Standard ohne Breakpoint
+  "col--sm-": map.get(vars.$wbx-breakpoints, "sm"), // Kleinere Bildschirme
+  "col--md-": map.get(vars.$wbx-breakpoints, "md"), // Mittlere Bildschirme
+  "col--lg-": map.get(vars.$wbx-breakpoints, "lg"), // Große Bildschirme
+  "col--xl-": map.get(vars.$wbx-breakpoints, "xl"), // Extra große Bildschirme
+  "col--xxl-": map.get(vars.$wbx-breakpoints, "xxl"), // Sehr große Bildschirme
+  "col--ultra-md-": map.get(vars.$wbx-breakpoints, "ultra-md"), // Ultra-MD
+  "col--ultra-lg-": map.get(vars.$wbx-breakpoints, "ultra-lg"), // Ultra-LG
+  "col--ultra-xl-": map.get(vars.$wbx-breakpoints, "ultra-xl"), // Ultra-XL
+  "col--ultra-xxl-": map.get(vars.$wbx-breakpoints, "ultra-xxl"), // Ultra-XXL
+  "col--ultra-3xl-": map.get(vars.$wbx-breakpoints, "ultra-3xl"), // Ultra-3XL
+  "col--ultra-4xl-": map.get(vars.$wbx-breakpoints, "ultra-4xl"), // Ultra-4XL
+  "col--ultra-5xl-": map.get(vars.$wbx-breakpoints, "ultra-5xl") // Ultra-5XL
+);

@@ -1,0 +1,58 @@
+// =============================================
+// == Opacity-Werte ============================
+// =============================================
+// Transparenzstufen für rgba(), Overlays, usw.
+$opacity-5: 0.05;
+$opacity-25: 0.25;
+$opacity-50: 0.50;
+$opacity-75: 0.75;
+$opacity-80: 0.80;
+$opacity-85: 0.85;
+$opacity-90: 0.90;
+$opacity-95: 0.95;
+$opacity-100: 1;
+
+
+// =============================================
+// == Basisfarben (ohne Opacity / ohne Kontext)
+// =============================================
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-primary: #0d6efd;
+$color-secondary: #6c757d;
+$color-success: #198754;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #0dcaf0;
+
+// benante Farbnamen
+$color-turquoise: turquoise;
+
+// HEX-Version – für darken(), mix(), etc.
+$color-turquoise-hex: #40e0d0;
+
+// Navigationsfarben
+$color-nav-dark: #333336;
+
+
+// =============================================
+// == Farben: Navigation =======================
+// =============================================
+$nav-bg-dark-default: rgba($color-nav-dark, $opacity-95);
+$nav-bg-dark-lg: rgba($color-nav-dark, $opacity-50);
+
+$color-text-white-95: rgba($color-white, $opacity-95);
+$color-text-white-75: rgba($color-white, $opacity-75);
+
+
+// =============================================
+// == Farben für Buttons =======================
+// =============================================
+$color-button-primary: $color-primary;
+$color-button-hover-bg: darken($color-primary, 10%);
+
+// =============================================
+// == Farben für Cards =======================
+// =============================================
+$color-card-bg: $color-white;
