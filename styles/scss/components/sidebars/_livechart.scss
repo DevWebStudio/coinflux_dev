@@ -1,14 +1,30 @@
+@use "sass:map";
+@use "../../abstracts/breakpoints"as wbx_breakpoints;
 @use "../../abstracts/layout-structure"as sidebars;
+@use "../../abstracts/layout-config"as layout_config;
 
 .grid-aside-right {
     display: none;
 
     @media (min-width: sidebars.$sidebar-display-breakpoint) {
-        top: sidebars.$sidebar-top;
-        right: sidebars.$sidebar-right;
-        width: sidebars.$sidebar-width;
-        display: flex;
-        flex-direction: column;
-        gap: sidebars.$sidebar-inner-gap;
+        @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "xxl")) {
+            top: sidebars.$sidebar-top;
+            right: sidebars.$sidebar-right-xxl; //$sidebar-right
+            width: sidebars.$sidebar-width-xxl;
+            display: flex;
+            flex-direction: column;
+            gap: sidebars.$sidebar-inner-gap;
+        }
+
+        @if layout_config.$is-breakpoint-ultra-md {
+            @media (min-width: map.get(wbx_breakpoints.$wbx-breakpoints, "ultra-md")) {
+                top: sidebars.$sidebar-top;
+                right: sidebars.$sidebar-right-ulta-md; //$sidebar-right
+                width: sidebars.$sidebar-width-ultra-md;
+                display: flex;
+                flex-direction: column;
+                gap: sidebars.$sidebar-inner-gap;
+            }
+        }
     }
 }

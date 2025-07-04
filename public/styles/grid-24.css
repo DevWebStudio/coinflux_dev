@@ -782,7 +782,7 @@
     max-width: 100%;
   }
 }
-@media (min-width: 2500px) {
+@media (min-width: 2400px) {
   .col--ultra-xl-1 {
     flex: 0 0 4.1666666667%;
     max-width: 4.1666666667%;

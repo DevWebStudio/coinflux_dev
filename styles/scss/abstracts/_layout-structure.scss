@@ -1,15 +1,20 @@
 @use "sass:map";
 @use "../abstracts/breakpoints"as wbx_breakpoints;
-@use "../abstracts/layout-spacing"as layout;
+@use "../abstracts/layout-spacing"as layout_spacing;
+@use "../abstracts/layout-config"as layout_config;
 
 $sidebar-display-breakpoint: map.get(wbx_breakpoints.$wbx-breakpoints, "ultra-lg");
-$sidebar-top: layout.$layout-sidebar-top;
 
-$sidebar-width: 300px;
-$sidebar-spacing-gap-left: 30px;
+$sidebar-top: layout_spacing.$layout-sidebar-top;
 $sidebar-inner-gap: 2.8rem;
 
-///
-/// Formeln
-/// 
-$sidebar-right: calc((100% - (layout.$layout-container-max-width + 2 * $sidebar-width + $sidebar-spacing-gap-left)) / 2);
+$sidebar-width-xxl: 300px;
+$sidebar-width-ultra-md: 250px;
+$sidebar-spacing-gap-left-xxl: 15px;
+$sidebar-spacing-gap-left-ultra-md: 10px;
+
+$sidebar-fine-tune-offset-xxl: 7px;
+$sidebar-fine-tune-offset-ultra-md: 7px;
+
+$sidebar-right-xxl: calc((100vw - layout_config.$breakpoint-container-xxl) / 2 - $sidebar-width-xxl - $sidebar-spacing-gap-left-xxl - $sidebar-fine-tune-offset-xxl);
+$sidebar-right-ulta-md: calc((100vw - layout_config.$breakpoint-container-ultra-md) / 2 - $sidebar-width-ultra-md - $sidebar-spacing-gap-left-ultra-md - $sidebar-fine-tune-offset-ultra-md);

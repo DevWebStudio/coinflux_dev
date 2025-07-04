@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // =============================================
 // == Opacity-Werte ============================
 // =============================================
@@ -50,7 +52,7 @@ $color-text-white-75: rgba($color-white, $opacity-75);
 // == Farben für Buttons =======================
 // =============================================
 $color-button-primary: $color-primary;
-$color-button-hover-bg: darken($color-primary, 10%);
+$color-button-hover-bg: color.adjust($color-primary, $lightness: -10%);
 
 // =============================================
 // == Farben für Cards =======================

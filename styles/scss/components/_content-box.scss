@@ -1,4 +1,4 @@
-@use "../abstracts/layout-spacing"as spacings;
+@use "../abstracts/layout-spacing"as layout_spacing;
 
 .content-box {
 
@@ -12,8 +12,8 @@
 
     &--main {
         height: 100%;
-        margin-top: spacings.$layout-main-top;
-        margin-bottom: spacings.$layout-main-bottom;
+        margin-top: layout_spacing.$layout-main-top;
+        margin-bottom: layout_spacing.$layout-main-bottom;
 
         .content-box-inner {
             max-width: 90%;

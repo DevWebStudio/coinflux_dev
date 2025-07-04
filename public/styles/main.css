@@ -58,34 +58,33 @@ nav {
 .wbx-layout-container {
   --wbx-gutter-x: 1.5rem;
   --wbx-gutter-y: 0;
-  max-width: 1350px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 @media (min-width: 576px) {
   .wbx-layout-container {
-    max-width: 540px;
+    max-width: 570px;
   }
 }
 @media (min-width: 768px) {
   .wbx-layout-container {
-    max-width: 720px;
+    max-width: 760px;
   }
 }
 @media (min-width: 992px) {
   .wbx-layout-container {
-    max-width: 960px;
+    max-width: 980px;
   }
 }
 @media (min-width: 1200px) {
   .wbx-layout-container {
-    max-width: 1140px;
+    max-width: 1180px;
   }
 }
 @media (min-width: 1400px) {
   .wbx-layout-container {
-    max-width: 1320px;
+    max-width: 1370px;
   }
 }
 
@@ -933,7 +932,7 @@ nav {
     max-width: 100%;
   }
 }
-@media (min-width: 2500px) {
+@media (min-width: 2400px) {
   .col--ultra-xl-1 {
     flex: 0 0 4.1666666667%;
     max-width: 4.1666666667%;
@@ -1642,10 +1641,10 @@ nav {
 .grid-aside-right {
   display: none;
 }
-@media (min-width: 2000px) {
+@media (min-width: 2000px) and (min-width: 1400px) {
   .grid-aside-right {
     top: 130px;
-    right: calc((100% - 1980px) / 2);
+    right: calc((100vw - 1370px) / 2 - 300px - 15px - 7px);
     width: 300px;
     display: flex;
     flex-direction: column;
