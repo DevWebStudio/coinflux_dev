@@ -1,3 +1,8 @@
+// Datei: components/sidebars/_livechart.scss
+// Doku: Steuert die Darstellung der rechten Sidebar (`.grid-aside-right`) für das LiveChart-Widget.
+// Nutzt mehrere Breakpoints aus `layout-structure` und `layout-config`, z. B. ab `xxl` und `ultra-md`.
+// Die Sidebar wird bei kleinen Viewports ausgeblendet und erst ab definierten Breakpoints eingeblendet.
+
 @use "sass:map";
 @use "../../abstracts/breakpoints"as wbx_breakpoints;
 @use "../../abstracts/layout-structure"as sidebars;

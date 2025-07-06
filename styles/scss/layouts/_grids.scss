@@ -1,3 +1,8 @@
+// Datei: layouts/_grids.scss
+// Doku: Definiert das Hauptseiten-Layout auf Basis von CSS Grid.
+// Bezieht sich auf die Gridstruktur aus `abstracts/layout-structure` und ordnet semantische Bereiche zu.
+// Die Container verwenden `grid-area`-Namen für Navigation, Hauptbereich und Footer.
+
 @use "../abstracts/layout-structure"as layout;
 
 .layout-content {

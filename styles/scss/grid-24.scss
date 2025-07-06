@@ -1,1 +1,6 @@
+// Datei: grid-24.scss
+// Doku: Einstiegspunkt für die Generierung des eigenentwickelten 24-Spalten-Gridsystems.
+// Diese Datei lädt ausschließlich das Grid-Modul aus `tools/grid-24`, das für die Ausgabe
+// einer eigenständigen CSS-Datei verwendet werden kann (z. B. via Webpack oder CLI-Compiler).
+
 @use "tools/grid-24";

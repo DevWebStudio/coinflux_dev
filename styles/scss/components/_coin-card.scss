@@ -1,3 +1,8 @@
+// Datei: components/_coin-card.scss
+// Doku: Visuelle Komponente für Coin-Karten.
+// Die Karte verwendet strukturierte Subklassen (BEM-ähnlich) wie `&__image`, `&__body`, `&__btn-outline`.
+// Farben und Schatten stammen aus `abstracts/colors`.
+
 @use "../abstracts/colors"as colors;
 
 .coin-card {

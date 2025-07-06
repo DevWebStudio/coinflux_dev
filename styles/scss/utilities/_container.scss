@@ -1,3 +1,9 @@
+// Datei: utilities/_container.scss
+// Doku: Definiert die zentrale Layout-Container-Klasse `.wbx-layout-container`.
+// Die maximale Breite des Containers richtet sich nach den Breakpoints und wird über CSS-Variablen gesteuert.
+// Die Werte stammen aus `abstracts/layout-config` und `abstracts/breakpoints`.
+// Die Datei folgt dem Prinzip des Bootstrap-Containers, wurde aber projektspezifisch angepasst.
+
 @use "sass:map";
 @use "../abstracts/layout-config"as layout_config;
 @use "../abstracts/breakpoints"as wbx_breakpoints;

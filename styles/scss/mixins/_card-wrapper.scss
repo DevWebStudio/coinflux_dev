@@ -1,3 +1,8 @@
+// Datei: mixins/_card-wrapper.scss
+// Doku: Generiert Utility-Klassen für wiederverwendbare Karten-Wrapper mit responsiven Spaltenbreiten.
+// Verwendet das eigene 24er-Grid-System (`col--...`) und orientiert sich an Breakpoint-basiertem Aufbau.
+// Ziel ist eine einheitliche Darstellung von Cards z. B. im Dashboard oder in Übersichtsansichten.
+
 @use "../tools/grid-24" as *;
 
 /// Erstellt eine Utility-Klasse für Card-Wrapper

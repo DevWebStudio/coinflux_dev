@@ -1,3 +1,8 @@
+// Datei: abstracts/_breakpoints.scss
+// Doku: Zentrale Breakpoint-Definitionen für das Layout-System (auch für Bootstrap-kompatible Nutzung).
+// Enthält klassische Größen wie sm–xxl sowie zusätzliche benutzerdefinierte "ultra"-Breakpoints.
+// Diese Map wird projektweit für Media Queries, Grid-Generierung und Utility-Klassen verwendet.
+
 $wbx-breakpoints: (
   "sm": 576px,  // Kleinere Bildschirme
   "md": 768px,  // Mittlere Bildschirme

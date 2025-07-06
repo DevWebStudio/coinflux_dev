@@ -1,5 +1,7 @@
-/// Generiert die Zuordnung von Breakpoint-Keys zu Prefixen
-/// für das 24er-Grid-System (z. B. col--ultra-xl-)
+// Datei: abstracts/_breakpoints-24.scss
+// Doku: Generiert die Breakpoint-Zuordnung für das 24-Spalten-Grid-System (z. B. col--ultra-xl-12).
+// Verwendet die in _breakpoints.scss definierten Breakpoints über `map.get()`
+// Ziel ist die dynamische Erzeugung responsiver Klassen über Präfixe wie col--xl-, col--ultra-xl-, usw.
 
 @use "sass:map";
 @use "./breakpoints"as vars;

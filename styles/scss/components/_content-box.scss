@@ -1,3 +1,7 @@
+// Datei: components/_content-box.scss
+// Doku: Universelle Container-Komponente mit Varianten (z. B. `--main`, `--sidebar-widget-right`, `--footer-bar`).
+// Nutzt Variablen aus `abstracts/layout-spacing`. Enthält spezielle Stile für feste Footerleisten.
+
 @use "../abstracts/layout-spacing"as layout_spacing;
 
 .content-box {

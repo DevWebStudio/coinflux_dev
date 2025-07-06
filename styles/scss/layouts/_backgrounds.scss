@@ -1,3 +1,8 @@
+// Datei: layouts/_backgrounds.scss
+// Doku: Definiert das globale Hintergrundbild-Layout.
+// Bindet Bildpfade aus `abstracts/images` ein und erzeugt Klassen zur Steuerung verschiedener Varianten.
+// Wird typischerweise verwendet für großflächige Seitenhintergründe, z. B. Login-Screen oder Dashboard.
+
 @use "../abstracts/images"as images;
 
 .background-image {

@@ -1,3 +1,8 @@
+// Datei: utilities/_layout-utils.scss
+// Doku: Beispiel für Breakpoint-abhängige Layout-Helfer.
+// `.justify-until--lg-center` zentriert Inhalte bis zum Breakpoint `lg`, danach linksbündig.
+// Das Prinzip lässt sich leicht erweitern auf weitere Utility-Klassen mit Breakpoint-Wechsel.
+
 @use "sass:map";
 @use "../abstracts/breakpoints"as wbx_breakpoints;
 

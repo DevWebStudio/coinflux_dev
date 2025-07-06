@@ -1,3 +1,8 @@
+// Datei: utilities/_display.scss
+// Doku: Definiert einfache Hilfsklassen zur Steuerung der Sichtbarkeit.
+// `.obj-hide` / `.obj-show` sind schlichte Display-Utilities ohne Breakpoints.
+// Varianten mit `!important` sind über `.obj-hide-imp` und `.obj-show-imp` verfügbar.
+
 .obj-hide        { display: none; }
 .obj-show        { display: block; }
 .obj-hide-imp    { display: none !important; }

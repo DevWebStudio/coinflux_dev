@@ -1,3 +1,19 @@
+// ===================================================
+// = Farbvariablen für Projektweite Gestaltung =======
+// ===================================================
+// Diese Datei enthält zentrale Farbdefinitionen, die für
+// Layout, Komponenten und Utilities im gesamten Projekt
+// verwendet werden.
+//
+// Ziel ist eine konsistente Farbbasis, die über Variablen
+// gesteuert wird. Die Variablen können je nach Anwendungsbereich
+// angepasst und erweitert werden (z. B. für Light/Dark Themes).
+//
+// Hinweise:
+// - Variablen sollten mit `$color-` oder `$text-` bzw. `$bg-` beginnen.
+// - Farben für Bootstrap-Komponenten können bei Bedarf überschrieben werden.
+// - Farbpaletten (Primär, Sekundär, Neutral, Warn etc.) zentral hier pflegen.
+
 @use "sass:color";
 
 // =============================================
@@ -12,7 +28,7 @@ $opacity-80: 0.80;
 $opacity-85: 0.85;
 $opacity-90: 0.90;
 $opacity-95: 0.95;
-$opacity-100: 1;
+$opacity-100: 1;    // DE64 1101 0101 5743 7198 99
 
 
 // =============================================

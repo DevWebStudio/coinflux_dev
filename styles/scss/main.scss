@@ -1,3 +1,7 @@
+// Datei: main.scss
+// Doku: Haupt-Einstiegspunkt für das SCSS-Bundle. Diese Datei importiert die modular aufgebauten Teilbereiche.
+// Die Struktur folgt dem 7-1-Pattern (bzw. erweitertem modularen SCSS-Stil) mit Fokus auf Übersicht und Wartbarkeit.
+
 @use 'base/normalize';
 
 @use "utilities/index"as util;

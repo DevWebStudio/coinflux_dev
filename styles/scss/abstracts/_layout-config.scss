@@ -1,27 +1,30 @@
 // ===================================================================
 // = Layout-Konfigurationswerte für Containergrößen & Breakpoint-Logik
 // ===================================================================
-// Diese Datei enthält zentrale Konfigurationswerte zur Steuerung
-// von Containerbreiten und optional aktivierten Features bei bestimmten
-// Breakpoints.
+// Enthält zentrale Konfigurationswerte zur Steuerung
+// von Containerbreiten und optional aktivierten Features bei bestimmten Breakpoints.
 //
 // Hinweis:
-// Die Breakpoint-Containergrößen sind unabhängig von den Viewport-
-// Breakpoints (definiert in _breakpoints.scss). Sie dienen z. B. zur
-// Berechnung von zentrierten Elementen wie Sidebars.
+// Diese Breakpoint-Containergrößen sind unabhängig von den Viewport-
+// Breakpoints (definiert in _breakpoints.scss).
+// Sie dienen z. B. zur Berechnung zentrierter Elemente wie Sidebars.
 //
-// Die Variable `$is-breakpoint-ultra-md` erlaubt es, bei Bedarf
-// zusätzliche Styles für sehr breite Displays ab 1600px zu aktivieren.
-//
-// Beispielnutzung:
+// Die Variable `$is-breakpoint-ultra-md` kann verwendet werden,
+// um zusätzliche Styles ab einer bestimmten Breite zu aktivieren.
+// Beispiel:
 // @if layout_config.$is-breakpoint-ultra-md { ... }
-// oder
+//
+// Oder zur Berechnung:
 // max-width: layout_config.$breakpoint-container-ultra-md;
+
+// Steuer-Flag: Wird bei > 1600px aktiviert (optional)
 $is-breakpoint-ultra-md: false;
 
 // =======================
 // = Containergrößen =====
 // =======================
+// Definieren die maximale Breite von zentralen Containern.
+// Werden zur Berechnung von Offsets oder centrierten Layouts genutzt.
 $breakpoint-container-sm: 570px;             // 540  570      576
 $breakpoint-container-md: 760px;             // 720  760      768
 $breakpoint-container-lg: 980px;             // 960  980      992

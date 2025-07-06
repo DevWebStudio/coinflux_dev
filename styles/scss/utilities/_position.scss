@@ -1,3 +1,7 @@
+// Datei: utilities/_position.scss
+// Doku: Einfache Utility-Klassen zur Positionssteuerung.
+// Diese Klassen setzen `position: absolute` oder `fixed` mit `!important` zur Durchsetzung gegen Frameworks oder Default-Styles.
+
 .is-absolute {
   position: absolute !important;
 }

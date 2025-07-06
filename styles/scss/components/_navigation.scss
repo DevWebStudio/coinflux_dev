@@ -1,3 +1,8 @@
+// Datei: components/_navigation.scss
+// Doku: Enthält animierte Navigations- und Layout-Helfer für die mobile und Desktop-Navigation.
+// Nutzt Variablen aus `typography`, `animation`, `colors` und `breakpoints`.
+// Animationsklassen und `.wbx-navbar-mobil` ermöglichen ein dynamisches Ein-/Ausblenden bei mobilen Layouts.
+
 @use "sass:map";
 @use "../abstracts/breakpoints"as wbx_breakpoints;
 @use "../abstracts/colors"as colors;

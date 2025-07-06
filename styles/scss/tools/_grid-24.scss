@@ -1,3 +1,9 @@
+// Datei: tools/_grid-24.scss
+// Doku: Generator für das projektweite 24-Spalten-Grid-System.
+// Erstellt für jeden definierten Breakpoint aus `abstracts/breakpoints-24` CSS-Klassen
+// im Format `.col--[breakpoint]-[1–24]` mit berechneter Prozentbreite.
+// Das Grid basiert auf Flexbox und verwendet mathematische Division über das Sass-Modul `math`.
+
 @use "sass:math";
 @use "sass:map";
 @use "../abstracts/breakpoints-24"as vars_grid;

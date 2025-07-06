@@ -1,3 +1,8 @@
+// Datei: utilities/_utilities.scss
+// Doku: Enthält SCSS-generierte Utility-Klassen für `.card-wrapper-[breakpoint]-[cols]`
+// Aufruf des Mixins `card-wrapper()` für definierte Varianten.
+// Auskommentierte Varianten zeigen die manuell generierte Struktur – relevant für Debugging oder Fallback.
+
 @use "../mixins/card-wrapper"as mixin;
 
 @include mixin.card-wrapper(xl, 8);

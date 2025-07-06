@@ -1,6 +1,8 @@
-// Transition für mobile Nav
+// Datei: abstracts/_animation.scss
+// Doku: Definiert Transition- und Transform-Werte für die mobile Navigation.
+// Diese Variablen steuern die Sichtbarkeit und Animation der mobilen Navigationsleiste.
+
 $nav-transition-mobile: opacity 0.5s ease-out, transform 0.5s ease-out;
 
-// Transform für mobile Navigation
 $nav-transform-hidden: translateY(-100%);
 $nav-transform-visible: translateY(0);

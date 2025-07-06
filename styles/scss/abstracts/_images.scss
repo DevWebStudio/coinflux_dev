@@ -1,8 +1,14 @@
+// Datei: abstracts/_images.scss
+// Doku: Definiert zentrale Pfade für Hintergrundbilder und SVG-Grafiken.
+// Diese Werte werden für Hintergrund-Designs und Sidebar-Visualisierungen genutzt.
+
 $background-default: '../../assets/images/backgrounds/bg-1920-01.jpg';
+
 $background-variant-01: '../../assets/images/backgrounds/business-5475664_1920.jpg';
 $background-variant-02: '../../assets/images/backgrounds/shares-5279686_1920.jpg';
 $background-variant-03: '../../assets/images/backgrounds/trading-643723_1920.jpg';
 
+// SVG-Grafiken für die Sidebar (z. B. Coin-Daten, Ladeanimationen)
 $svg-sidebar-livedata-logo: 'public/image/svg/coin-trend-blur.svg';
 $svg-sidebar-livedata-logo-2: 'public/image/svg/coin-trend-red.svg';
 $svg-sidebar-livedata-circle: 'public/image/svg/timer-circle-01.svg';
