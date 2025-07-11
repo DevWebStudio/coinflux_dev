@@ -1,0 +1,226 @@
+{
+  "index": {
+    "pageSection": "frontend",
+    "label": "Start",
+    "href": "/index.html",
+    "pageTitle": "Startseite",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name-xy": "description",
+        "content": "Willkommen auf der Startseite"
+      },
+      {
+        "name": "description",
+        "content": "Willkommen auf der Startseite der Coin-Übersicht."
+      },
+      {
+        "name": "keywords",
+        "content": "start, übersicht, coins, dashboard, home"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      },
+      {
+        "property": "author",
+        "content": "Max M"
+      },
+      {
+        "http-equiv": "origin-trial",
+        "content": "tokenparameter"
+      }
+    ]
+  },
+  "coin-create": {
+    "label": "Coin anlegen",
+    "href": "coin-create.html",
+    "pageTitle": "Coins anlegen",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name": "description",
+        "content": "Füge neue Coins zum Archiv hinzu."
+      },
+      {
+        "name": "keywords",
+        "content": "coin, hinzufügen, datenbank, neu, eintragen"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  },
+  "coin-edit": {
+    "label": "Coin bearbeiten",
+    "href": "coin-edit.html",
+    "pageTitle": "Coins bearbeiten",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name": "description",
+        "content": "Bearbeite vorhandene Coin-Einträge im Archiv."
+      },
+      {
+        "name": "keywords",
+        "content": "coin, bearbeiten, daten ändern, editieren, archiv"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  },
+  "coin-live": {
+    "label": "Live-Kurse",
+    "href": "coin-live.html",
+    "pageTitle": "Live-Kurse",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name": "description",
+        "content": "Zeigt die aktuellen Live-Kurse der Coins."
+      },
+      {
+        "name": "keywords",
+        "content": "live, kurse, coins, aktuell, realtime"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  },
+  "coin-history": {
+    "label": "Historie",
+    "href": "coin-history.html",
+    "pageTitle": "Historische Daten",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name": "description",
+        "content": "Analysiere historische Kursdaten von Coins."
+      },
+      {
+        "name": "keywords",
+        "content": "coins, historie, daten, analyse, kursverlauf"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  },
+  "php-info": {
+    "label": "PHP INFO",
+    "href": "php-info.html",
+    "pageTitle": "PHP Serverdaten",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name": "description",
+        "content": "PHP-Konfiguration und Serverdaten anzeigen."
+      },
+      {
+        "name": "keywords",
+        "content": "php, info, server, daten, einstellungen"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  },
+  "coin-log": {
+    "label": "Coin Log",
+    "href": "coin-log.html",
+    "pageTitle": "Logdatei Coinabrufe",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name": "description",
+        "content": "Anzeige der bisherigen Serveraufrufe für Coins."
+      },
+      {
+        "name": "keywords",
+        "content": "log, coins, aufrufe, datenbank, api"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  },
+  "coin-graph": {
+    "label": "Coin Graph",
+    "href": "coin-graph.html",
+    "pageTitle": "Coins grafisch darstellen",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name": "description",
+        "content": "Grafische Darstellung verschiedener Coin-Verläufe."
+      },
+      {
+        "name": "keywords",
+        "content": "grafik, verlauf, chart, coins, daten"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  },
+  "coin-impressum": {
+    "label": "Impressum",
+    "href": "impressum.html",
+    "pageTitle": "Impressum",
+    "isNavigation": false,
+    "isPopup": true,
+    "isMegaMenu": false,
+    "metaData": [{
+        "name": "description",
+        "content": "Rechtliche Informationen und Impressum dieser Seite."
+      },
+      {
+        "name": "keywords",
+        "content": "rechtlich, impressum, kontakt, adresse, angaben"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  },
+  "login-user": {
+    "label": "Login",
+    "href": "#",
+    "pageTitle": "Benutzer Login",
+    "isNavigation": true,
+    "isPopup": false,
+    "isMegaMenu": true,
+    "children": [],
+    "metaData": [{
+        "name": "description",
+        "content": "Benutzer-Login und Registrierung."
+      },
+      {
+        "name": "keywords",
+        "content": "login, anmelden, registrieren, benutzer, auth"
+      },
+      {
+        "name": "robots",
+        "content": "index, follow"
+      }
+    ]
+  }
+}

@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- weitere Angaben zur Laufzeit einbinden, description, keys, ... -->
     <title>CoinFlux Dasboard</title>
 
     <script>
@@ -13,10 +12,27 @@
             const userAgent = navigator.userAgent;
             const isEdge14 = userAgent.includes('Edge/14');
             if (simulateUnsupportedBrowser || isEdge14 || !window.fetch || !window.Promise || !window.addEventListener) {
-                window.location.href = '/browser-not-supported.html';
+                window.location.href = '/pages/info/browser-not-supported.html';
             }
         })();
     </script>
+    <noscript>
+        <div class="wbx-noscript-overlay">
+            <div class="wbx-noscript-box alert alert-danger p-4">
+                <div class="wbx-noscript-content">
+                    <div class="wbx-noscript-text">
+                        <strong>JavaScript ist deaktiviert.</strong><br>
+                        Diese Webseite verwendet moderne Webtechnologien, die JavaScript benötigen.<br>
+                        Ohne aktiviertes JavaScript können Sie die Inhalte leider nicht anzeigen oder nutzen.<br><br>
+                        Bitte aktivieren Sie JavaScript in den Einstellungen Ihres Browsers.<br>
+                        Weitere Informationen finden Sie auf unserer Hilfeseite.
+                        <br><br>
+                        <a href="/pages/info/javascript-deaktiviert.html" class="btn btn-primary mt-3">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="styles/bootstrap.css">
@@ -28,7 +44,7 @@
 
 <body>
     <!-- Daten -->
-    <span id="dataset-parameters" data-parameter-seite='{
+    <span id="dataset-parameters" data-parameter-page='{
         "id": "index"
     }'></span>
     <div class="background-image background-image-file-default"></div>
@@ -53,31 +69,29 @@
                                     data-page="index">Startseite</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="pages/frontend/coin-create.html"
-                                    data-page="coin-anlegen">Coins anlegen</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-create">Coins
+                                    anlegen</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active wbx-nav-link-centered" href="#"
-                                    data-page="coin-bearbeiten">Coins bearbeiten</a>
+                                <a class="nav-link active wbx-nav-link-centered" href="#" data-page="coin-edit">Coins
+                                    bearbeiten</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="pages/frontend/coin-live.html"
-                                    data-page="coin-live">Live-Kurse</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-live">Live-Kurse</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="#"
-                                    data-page="coin-graph">Coin-Graph</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-graph">Coin-Graph</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="#"
-                                    data-page="coin-historie">Historische Daten</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-history">Historische
+                                    Daten</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="#"
-                                    data-page="php-info">PHP Serverdaten</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="php-info">PHP
+                                    Serverdaten</a>
                             </li>
                             <li class="nav-item obj-hide">
-                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="dummy">
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-dummy">
                                     Dummy Parameter der keine Funktion aber viel Text hat
                                 </a>
                             </li>
@@ -85,8 +99,8 @@
 
                         <ul id="navbarNavPrimarLogin" class="navbar-nav wbx-nav-login">
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="#" 
-                                    data-page="coin-log">Logdaten Server</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-log">Logdaten
+                                    Server</a>
                             </li>
                             <li class="nav-item">
                                 <span class="nav-link active wbx-nav-link-centered" data-page="login-user">
@@ -125,11 +139,11 @@
                             <h1 class="text-center">Willkommen bei WBX Coin-Flux</h1>
                             <p class="text-center">Wähle eine Funktion aus dem Menü, um fortzufahren.</p>
 
-                            <h2>Willkommen</h2>
+                            <h2>Startseite</h2>
                             <p>Wähle eine Funktion aus:</p>
 
                             <div class="row justify-until--lg-center text-center mt-4 gy-4 row--gap-y-clean">
-                                
+
                                 <div class="card-wrapper-xl-8 mb-2 d-flex">
                                     <div class="coin-card">
                                         <img src="assets/images/content/cards/01.jpg" alt="Coins anlegen"
@@ -143,12 +157,13 @@
                                                 stehen sofort
                                                 für weitere Funktionen bereit.
                                             </p>
-                                            <a href="pages/frontend/coin-create.html" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                            <a href="pages/frontend/coin-create.html"
+                                                class="coin-card__btn-outline btn mt-auto align-self-end">
                                                 Mehr erfahren</a>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card-wrapper-xl-8 mb-2 d-flex">
                                     <div class="coin-card">
                                         <img src="assets/images/content/cards/02.jpg"
@@ -165,7 +180,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card-wrapper-xl-8 mb-2 d-flex">
                                     <div class="coin-card">
                                         <img src="assets/images/content/cards/03.jpg" alt="Kursdaten anzeigen"
@@ -177,7 +192,8 @@
                                                 Die Daten werden beim Laden der Seite in Echtzeit abgerufen und visuell
                                                 dargestellt.
                                             </p>
-                                            <a href="pages/frontend/coin-live.html" class="coin-card__btn-outline btn mt-auto align-self-end">
+                                            <a href="pages/frontend/coin-live.html"
+                                                class="coin-card__btn-outline btn mt-auto align-self-end">
                                                 Mehr erfahren
                                             </a>
                                         </div>
@@ -191,10 +207,12 @@
                                         <div class="coin-card__body">
                                             <h3 class="coin-card__title">📊 Historische Daten</h3>
                                             <p class="coin-card__text">
-                                                Hier können Kursdaten aus der Vergangenheit angezeigt werden. Die Darstellung erfolgt tabellarisch oder grafisch – je nach Auswahl – 
+                                                Hier können Kursdaten aus der Vergangenheit angezeigt werden. Die
+                                                Darstellung erfolgt tabellarisch oder grafisch – je nach Auswahl –
                                                 mit optionaler Filterung nach Zeitraum und Coin.
                                                 <br>
-                                                Hier können Kursdaten aus der Vergangenheit angezeigt werden. Die Darstellung erfolgt tabellarisch oder grafisch – je nach Auswahl – 
+                                                Hier können Kursdaten aus der Vergangenheit angezeigt werden. Die
+                                                Darstellung erfolgt tabellarisch oder grafisch – je nach Auswahl –
                                                 mit optionaler Filterung nach Zeitraum und Coin.
                                             </p>
                                             <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
@@ -211,7 +229,8 @@
                                         <div class="coin-card__body">
                                             <h3 class="coin-card__title">📋 Serverdaten</h3>
                                             <p class="coin-card__text">
-                                                Gibt interne Systemdaten aus, z. B. Datenbankverbindungen, Tabellenstatus oder technische Logs. 
+                                                Gibt interne Systemdaten aus, z. B. Datenbankverbindungen,
+                                                Tabellenstatus oder technische Logs.
                                                 Diese Seite dient primär der Überprüfung und Wartung.
                                             </p>
                                             <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
@@ -223,12 +242,12 @@
 
                                 <div class="card-wrapper-xl-8 mb-2 d-flex">
                                     <div class="coin-card">
-                                        <img src="assets/images/content/cards/06.jpg" alt="Logdaten tabelarisch anzeigen"
-                                            class="coin-card__image" />
+                                        <img src="assets/images/content/cards/06.jpg"
+                                            alt="Logdaten tabelarisch anzeigen" class="coin-card__image" />
                                         <div class="coin-card__body">
                                             <h3 class="coin-card__title">🔐 Logdaten tabelarisch anzeigen</h3>
                                             <p class="coin-card__text">
-                                                Zeigt alle erfassten Log-Vorgänge inklusive Zeitstempel und IP-Adresse. 
+                                                Zeigt alle erfassten Log-Vorgänge inklusive Zeitstempel und IP-Adresse.
                                                 Die Ausgabe dient zur Übersicht und Analyse von Benutzerzugriffen.
                                             </p>
                                             <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
@@ -245,7 +264,8 @@
                                         <div class="coin-card__body">
                                             <h3 class="coin-card__title">🧩 Coin Graph erzeugen</h3>
                                             <p class="coin-card__text">
-                                                Erstellt grafische Visualisierungen von Coin-Daten. Es können unterschiedliche Diagrammtypen gewählt 
+                                                Erstellt grafische Visualisierungen von Coin-Daten. Es können
+                                                unterschiedliche Diagrammtypen gewählt
                                                 und nach Zeitraum oder Coin-ID gefiltert werden.
                                             </p>
                                             <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
@@ -262,7 +282,8 @@
                                         <div class="coin-card__body">
                                             <h3 class="coin-card__title">🔑 Anmeldung</h3>
                                             <p class="coin-card__text">
-                                                Ermöglicht die Anmeldung mit Benutzername und Passwort. Bei erfolgreichem Login stehen 
+                                                Ermöglicht die Anmeldung mit Benutzername und Passwort. Bei
+                                                erfolgreichem Login stehen
                                                 erweiterte Funktionen und geschützte Bereiche zur Verfügung.
                                             </p>
                                             <a href="#" class="coin-card__btn-outline btn mt-auto align-self-end">
@@ -282,34 +303,41 @@
                 <div class="content-box content-box--footer wbx-layout-container px-4">
                     <section>
                         <div class="row" style="margin-bottom: -20px;">
-
+                            <!-- #1 -->
                             <div class="col--24 col--md-8 col--xl-4 mb-2">
                                 <p class="p-4">
-                                    Links zu bestimmten wichtigen Seiten
+                                    §1 Links zu bestimmten wichtigen Seiten
                                 </p>
                             </div>
+                            <!-- 2 -->
                             <div class="col--24 col--md-8 col--xl-4 mb-2">
                                 <p class="p-4">
-                                    Informationstext
+                                    §2 Informationstext
                                 </p>
                             </div>
+                            <!-- 3 -->
                             <div class="col--24 col--md-8 col--xl-4 mb-2">
                                 <p class="p-4">
-                                    weitere wichtige Links
+                                    §3 weitere wichtige Links
                                 </p>
                             </div>
+                            <!-- 4 -->
                             <div class="col--24 col--md-24 col--xl-12 mb-2">
                                 <div class="row" style="margin-bottom: -20px;">
-                                    <div class="col--8">
+                                    <!-- 4.1  -->
+                                    <div class="col--24 col--md-8">
                                         <p class="px-4">
+                                            §4.1<br>
                                             Max Mostermann
                                             Maxi Mostermann
                                             Muster Straße 49
                                             99999 Musterstadt
                                         </p>
                                     </div>
-                                    <div class="col--8">
+                                    <!-- 4.2  -->
+                                    <div class="col--24 col--md-8">
                                         <p class="px-4">
+                                            §4.2<br>
                                             Schutzrechtsverletzung
                                             Blindtextgenerator bemüht sich, etwaige Auseinandersetzungen im Konsens zu
                                             lösen.
@@ -324,8 +352,10 @@
                                             Willen. -->
                                         </p>
                                     </div>
-                                    <div class="col--8">
+                                    <!-- 4.3-->
+                                    <div class="col--24 col--md-8">
                                         <p class="px-4">
+                                            §4.3<br>
                                             Inhalt
                                             Die Inhalte dieses Webprojektes wurden sorgfältig geprüft und nach bestem
                                             Wissen
@@ -341,9 +371,11 @@
                                 </div>
                             </div>
                         </div>
+
                     </section>
                 </div>
             </footer>
+            
         </div>
     </div>
 

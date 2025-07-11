@@ -1,0 +1,92 @@
+{
+    "resetCoinLiveDb": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "reset_table_group_coinlive",
+        "apiHandler": "Api/ResetCoinLiveDb",
+        "method": "POST",
+        "apiFile": "php/reset-coin-live-db.php",
+        "checked": true
+    },
+    "countDbTable": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "count_db_table",
+        "apiHandler": "Api/CountDbTable",
+        "method": "POST",
+        "tablesRelation": "countRowsInTable"
+    },
+    "loadTableWithRelation": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "data_table_relation",
+        "apiHandler": "Api/LoadTableWithRelation",
+        "method": "POST",
+        "tablesRelation": "coinLiveJoin"
+    },
+    "saveCoinLiveDb": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "save_db_coinlive",
+        "apiHandler": "Api/SaveCoinLiveDb",
+        "method": "POST",
+        "fileOld": "php/save-coin-live-db.php",
+        "checked": true
+    },
+    "saveLogDb": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "save_db_logs",
+        "apiHandler": "Api/SaveLogDb",
+        "method": "POST",
+        "fileOld": "php/save-log-db.php",
+        "checked": true
+    },
+    "saveLogJson": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "save_json_logs",
+        "apiHandler": "Api/SaveLogJson",
+        "method": "POST",
+        "fileOld": "php/save-log-json.php",
+        "checked": true
+    },
+    "serverInfo": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "output_php_info",
+        "apiHandler": "Api/ServerInfo",
+        "method": "POST",
+        "fileOld": "php/server-info.php",
+        "checked": true
+    },
+    "fetchLogs": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "output_tables_...",
+        "apiHandler": "Api/FetchLogs",
+        "method": "POST",
+        "fileOld": "php/fetch-logs.php",
+        "checked": true,
+        "tablesRelation": "getAllRowsFromTable"
+    },
+    "addCoin": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "coin_parameter_save",
+        "apiHandler": "Api/AddCoin",
+        "method": "POST",
+        "fileOld": "php/add-coin.php"
+    },
+    "updateCoin": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "coin_parameter_update",
+        "apiHandler": "Api/UpdateCoin",
+        "method": "POST",
+        "FileOld": "php/update-coin.php"
+    },
+    "sidebarCoinsLiveChart": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "sidebar_coins_output_livechart",
+        "apiHandler": "Api/SidebarCoinsLiveChart",
+        "method": "POST"
+    },
+    "": {
+        "saveUrlServer": "php/api-template.php",
+        "result": "",
+        "apiHandler": "",
+        "method": "POST",
+        "fileOld": "(veralted)"
+    }
+}

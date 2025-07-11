@@ -1,0 +1,38 @@
+{
+    "html": true,
+    "javaScript": false,
+    "module": false,
+    "isDevMode": true,
+    "paths": {
+        "config": "/scripts/data/json/",
+        "modules": {
+            "base": "/scripts/",
+            "ext": "../libs/",
+            "groups": {
+                "fro": {
+                  "name": "pages/frontend/"  
+                },
+                "adm": {
+                  "name": "pages/admin/"  
+                },
+                "usr": {
+                  "name": "pages/user/"  
+                }
+            }
+        }
+    },
+    "configFiles": {
+        "apiEndpoints": "config-api-endpoints.json",
+        "navigation": "config-navigation.json",
+        "layout": "config-layout.json",
+        "modules": "config-modul-list.json"
+    },
+    "navigation": {
+        "isAfterTitle": false,
+        "linkPrefixFrontend": "pages/frontend/"
+    },
+    "modulesData": {
+      "apiEndpoints": {},
+      "configPage": {}
+    }
+}

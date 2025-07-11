@@ -2,7 +2,7 @@
 // Doku: Enthält SCSS-generierte Utility-Klassen für `.card-wrapper-[breakpoint]-[cols]`
 // Aufruf des Mixins `card-wrapper()` für definierte Varianten.
 // Auskommentierte Varianten zeigen die manuell generierte Struktur – relevant für Debugging oder Fallback.
-
+@use "../abstracts/layout-spacing"as layout_spacing;
 @use "../mixins/card-wrapper"as mixin;
 
 @include mixin.card-wrapper(xl, 8);
@@ -33,3 +33,24 @@
 //     @extend .col--md-12;
 //     @extend .col--lg-6;
 // }
+
+
+.spacing-1 {
+    height: layout_spacing.$spacing-1;
+}
+
+.spacing-2 {
+    height: layout_spacing.$spacing-2;
+}
+
+.spacing-3 {
+    height: layout_spacing.$spacing-3;
+}
+
+.spacing-4 {
+    height: layout_spacing.$spacing-4;
+}
+
+.spacing-5 {
+    height: layout_spacing.$spacing-5;
+}

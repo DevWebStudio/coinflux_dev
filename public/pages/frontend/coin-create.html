@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- weitere Angaben zur Laufzeit einbinden, description, keys, ... -->
     <title>CoinFlux Dasboard</title>
 
     <script>
@@ -13,10 +12,28 @@
             const userAgent = navigator.userAgent;
             const isEdge14 = userAgent.includes('Edge/14');
             if (simulateUnsupportedBrowser || isEdge14 || !window.fetch || !window.Promise || !window.addEventListener) {
-                window.location.href = '/browser-not-supported.html';
+                window.location.href = '/pages/info/browser-not-supported.html';
             }
         })();
     </script>
+    <noscript>
+        <div class="wbx-noscript-overlay">
+            <div class="wbx-noscript-box alert alert-danger p-4">
+                <div class="wbx-noscript-content">
+                    <div class="wbx-noscript-text">
+                        <strong>JavaScript ist deaktiviert.</strong><br>
+                        Diese Webseite benötigt JavaScript zur Darstellung und Funktion.<br>
+                        Bitte aktivieren Sie JavaScript in Ihrem Browser.
+                        <br><br>
+                        <a href="/index.html" class="btn btn-primary mt-3">Zur Startseite</a>
+                        <br><br>
+                        Weitere Informationen finden Sie auf der <a href="/pages/info/javascript-deaktiviert.html"
+                            class="btn btn-primary mt-3">Hilfeseite</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../styles/bootstrap.css">
@@ -27,7 +44,7 @@
 </head>
 
 <body>
-    <span id="dataset-parameters" data-parameter-seite='{
+    <span id="dataset-parameters" data-parameter-page='{
         "id": "coin-create",
         "dataLevel": 2
     }'></span>
@@ -39,7 +56,7 @@
 
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark wbx-bg-dark p-3 grid-nav">
                 <div class="container-fluid wbx-layout-container">
-                    <a class="navbar-brand" href="../../index.html">WBX Coin-Archiv</a>
+                    <a class="navbar-brand" href="/index.html">WBX Coin-Archiv</a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#wbxNavbarPrimary" aria-controls="wbxNavbarPrimary" aria-expanded="false"
@@ -49,35 +66,33 @@
                     <div class="collapse navbar-collapse wbx-navbar-mobil" id="wbxNavbarPrimary">
                         <ul id="navbarNavPrimar" class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active wbx-nav-link-centered " href="../../index.html"
+                                <a class="nav-link active wbx-nav-link-centered " href="#"
                                     data-page="index">Startseite</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="coin-create.html"
-                                    data-page="coin-anlegen">Coins anlegen</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-create">Coins
+                                    anlegen</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active wbx-nav-link-centered" href="#"
-                                    data-page="coin-bearbeiten">Coins bearbeiten</a>
+                                <a class="nav-link active wbx-nav-link-centered" href="#" data-page="coin-edit">Coins
+                                    bearbeiten</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="coin-live.html"
-                                    data-page="coin-live">Live-Kurse</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-live">Live-Kurse</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="#"
-                                    data-page="coin-graph">Coin-Graph</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-graph">Coin-Graph</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="#"
-                                    data-page="coin-historie">Historische Daten</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-history">Historische
+                                    Daten</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="#"
-                                    data-page="php-info">PHP Serverdaten</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="php-info">PHP
+                                    Serverdaten</a>
                             </li>
                             <li class="nav-item obj-hide">
-                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="dummy">
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-dummy">
                                     Dummy Parameter der keine Funktion aber viel Text hat
                                 </a>
                             </li>
@@ -85,8 +100,8 @@
 
                         <ul id="navbarNavPrimarLogin" class="navbar-nav wbx-nav-login">
                             <li class="nav-item">
-                                <a class="nav-link wbx-nav-link-centered" href="#"
-                                    data-page="coin-log">Logdaten Server</a>
+                                <a class="nav-link wbx-nav-link-centered" href="#" data-page="coin-log">Logdaten
+                                    Server</a>
                             </li>
                             <li class="nav-item">
                                 <span class="nav-link active wbx-nav-link-centered" data-page="login-user">
@@ -102,10 +117,11 @@
                 <div class="content-box content-box--main wbx-layout-container p-4">
                     <div class="content-box-inner">
                         <section>
-                            <h1 class="text-center">Willkommen bei WBX Coin-Flux</h1>
-                            <h2>
-                                Hier werden die Coins erstellt für die später verwendung
-                            </h2>
+                            <h1 class="text-center">WBX Coin-Flux – Coins anlegen</h1>
+                            <p class="text-center">Erstelle deine persönliche Auswahl an Kryptowährungen.</p>
+
+                            <div class="spacing-3"></div>
+                            <h2>Neue Coins hinzufügen</h2>
                         </section>
                     </div>
                 </div>

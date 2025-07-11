@@ -1,0 +1,53 @@
+{
+    "coin-create": [{
+            "name": "tools/api/get-endpints.js",
+            "initialisierung": true,
+            "type": "intern_modul",
+            "parameters": ["globalSettings", "dataPage"]
+        },
+        {
+            "name": "coin-create.js",
+            "initialisierung": true,
+            "linkPrefix": "coin-create/",
+            "group": "fro",
+            "type": "main",
+            "parameters": ["globalSettings", "dataPage"]
+        }, {
+            "name": "partials/template-loader.js",
+            "initialisierung": true,
+            "type": "intern_modul"
+        }
+    ],
+    "coin-edit": [{
+        "name": "coin-edit.js",
+        "initialisierung": true
+    }],
+    "coin-live": [{
+        "name": "coin-live.js",
+        "initialisierung": true
+    }],
+    "coin-history": [{
+        "name": "coin-history.js",
+        "initialisierung": true
+    }],
+    "php-info": [{
+        "name": "php-info.js",
+        "initialisierung": true
+    }],
+    "coin-log": [{
+        "name": "coin-log.js",
+        "initialisierung": true
+    }],
+    "coin-graph": [{
+        "name": "partials/template-loader.js",
+        "initialisierung": true,
+        "type": "intern_modul"
+    }, {
+        "name": "coin-graph.js",
+        "initialisierung": true
+    }, {
+        "name": "gridstack/gridstack.js",
+        "initialisierung": false,
+        "type": "extern"
+    }]
+}
